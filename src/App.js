@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Pokedex</h1>
+      <h1>Pokédex</h1>
       <InfiniteScroll 
         className="pokedex"
         dataLength={pokemons.length}
