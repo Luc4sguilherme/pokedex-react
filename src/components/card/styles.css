@@ -138,3 +138,17 @@
     transform: translateY(0);
   }
 }
+
+@media only screen and (max-width: 420px) {
+  .card {
+    padding: 20px;
+  } 
+  
+  .card-image {
+    height: 120px;
+  } 
+
+  .card-title {
+    font-size: 25px;
+  }
+}
