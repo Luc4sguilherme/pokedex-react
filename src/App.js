@@ -3,7 +3,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 import './App.css';
 import Card from './components/card'
-import getPokemon from './services/pokeapi'
+import { getPokemon, getPokemons} from './services/pokeapi'
 
 function App() {
   const amountOfPoKemons = 1118
@@ -20,12 +20,8 @@ function App() {
       return;
     }
 
-    getPokemon(limit, offset).then(({ results }) => {
-      Promise.all(results.map(async data => {
-        const response = await fetch(`${data.url}`)
-        const pokemon = await response.json()
-        return pokemon
-      })).then(pokemon => {
+    getPokemons(limit, offset).then(({ results }) => {
+      Promise.all(results.map(data => getPokemon(data.url))).then(pokemon => {
         setPokemons([...pokemons, ...pokemon]) 
       })
     })

@@ -1,3 +1,13 @@
-const getPokemon =  (limit, offset) => fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`).then(response => response.json())
+export async function getPokemons(limit, offset) {
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
+  const data = await response.json();
 
-export default getPokemon
+  return data;
+}
+
+export async function getPokemon(url) {
+  const response = await fetch(url);
+  const pokemon = await response.json();
+
+  return pokemon;
+}
