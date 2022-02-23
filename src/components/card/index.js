@@ -3,7 +3,7 @@ import React from 'react';
 import './styles.css'
 import getPokemonImage from '../../utils/getPokemonImage'
 
-function card(props) {
+function Card(props) {
   const elementTypes = props.types.map(typesInfo => typesInfo.type.name)
 
   return (
@@ -15,4 +15,4 @@ function card(props) {
   );
 }
 
-export default card;
+export default Card;
