@@ -7,9 +7,9 @@ import Pokemon from "./pages/Pokemon";
 
 function RoutesContainer() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/pokedex-react">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" exact element={<Home />} />
         <Route path="/pokemon/:name" element={<Pokemon />} />
       </Routes>
     </BrowserRouter>
