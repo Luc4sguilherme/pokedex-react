@@ -1,0 +1,151 @@
+.pokemon-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 650px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 25px;
+  color: #000;
+}
+
+.pokemon-wrapper-top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.back-btn {
+  background: none;
+  border: 0;
+  width: 45px;
+  cursor: pointer;
+  text-align: start;
+  transition: opacity 0.1s ease-in;
+}
+
+.back-btn:hover {
+  opacity: 0.5;
+}
+
+.pokemon-image {
+  height: 300px;
+  margin: 50px auto;
+}
+
+.pokemon-infos {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: auto;
+  box-sizing: border-box;
+  grid-gap: 5px;
+  justify-content: end;
+}
+
+.pokemon-types {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pokemon-name {
+  text-transform: capitalize;
+  flex: 1;
+  text-align: center;
+}
+
+.pokemon-stats {
+  text-transform: capitalize;
+}
+
+.pokemon-infos div {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.pokemon-infos div span {
+  margin-left: 5px;
+}
+
+#pokemon-type {
+  text-transform: capitalize;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: auto;
+  margin-left: 5px;
+  padding: 2px 5px;
+}
+
+@media only screen and (max-width: 750px) {
+  .pokemon-name {
+    font-size: 1.8rem;
+  }
+
+  .pokemon-wrapper {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    justify-content: space-around;
+  }
+
+  .pokemon-wrapper-top {
+    flex-direction: column-reverse;
+  }
+
+  .back-btn {
+    align-self: flex-end;
+    text-align: center;
+  }
+
+  .pokemon-image {
+    height: 200px;
+    margin: 50px auto;
+  }
+
+  .pokemon-infos {
+    grid-template-columns: 200px 200px;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .pokemon-infos div {
+    height: 35px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .pokemon-name {
+    font-size: 1.5rem;
+  }
+
+  .pokemon-image {
+    height: 170px;
+    margin: 30px auto;
+  }
+
+  .pokemon-infos {
+    grid-template-columns: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+
+  .pokemon-infos div {
+    height: 30px;
+  }
+}
